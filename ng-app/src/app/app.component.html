@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="card mt-5">
+    <div class="card-body">
+      <h5 class="card-title">Productive Assessment</h5>
+      <ng-container *ngFor="let component of components;">
+        <app-btns-container 
+          *ngIf="component.visible"
+          [componentName]="component.name" 
+          (btnClick)="onBtnClick($event)">
+        </app-btns-container>
+      </ng-container>
+    </div>
+  </div>
+</div>
